@@ -1,6 +1,6 @@
-\Images
+Images/
 .RData
-\data
+data/
 .Rproj
 .tex
 .png
@@ -8,3 +8,4 @@
 .jpeg
 .csv
 .txt
+.DS_Store
