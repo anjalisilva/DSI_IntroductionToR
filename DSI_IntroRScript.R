@@ -58,6 +58,8 @@ print(x) # explicit printing using print() function
 typeof(x) # "double" obtained using typeof() function
 length(x) # 
 
+print("Hello world")
+
 # Built-in functions are part of R standard 
 # or base packages
 library(help = "base")
