@@ -255,13 +255,190 @@ y <- rep(letters[1:5], 3)
 is.vector(y)
 
 
+# slide 65
 # There are multiple ways to create a vector:
 ?vector # vector using vector() function
 # vector(mode, length )
 
+# The atomic modes are ”logical”, ”integer”, 
+# ”numeric” (synonym ”double”), ”complex”, 
+# ”character” and ”raw”:
+
+# Initialize vector of certain length
+x <- vector(mode = "numeric", length = 5) 
+x #00000
+
+# Initialize vector of certain length
+x <- vector(mode = "character", length = 10)
+x # "" "" "" "" "" "" "" "" "" ""
+
+
+# slide 66
+# If mixing objects of two different classes in a vector, every element in the vector is forced to be same class.
+y <- c(2.2, "a")
+class(y) # "character"
+y
+
+
+# slide 67
+x <- 1L:10L
+x # 1  2  3  4  5  6  7  8  9 10
+class(x) # "integer"
+
+z <- as.character(x)
+z # "1"  "2"  "3"  "4"  "5"  "6"  "7"  "8"  "9"  "10"
+class(z) # "character"
+
+
+# slide 68
+# Sometimes objects can be coerced from one class to
+# another using the as.* functions:
+w <- c("a", "b", "c")
+w
+class(w)
+typeof(w)
+
+q <- as.numeric(w)
+q # NA NA NA
+
+
+numbVar <- c("1", "2", "3")
+class(numbVar)
+typeof(numbVar)
+
+numbVarChange <- as.numeric(c("1", "2", "3"))
+class(numbVarChange)
+typeof(numbVarChange)
+
+numbVarChange <- as.integer(c("1", "2", "3"))
+class(numbVarChange)
+typeof(numbVarChange)
+
+
+numbVarChange <- as.logical(c("1", "2", "3"))
+numbVarChange
+class(numbVarChange)
+typeof(numbVarChange)
+
+# slide 69
+# Question 7
+# Vector index in R starts from .
+
+
+# slide 70
+# To access the contents of the vector use [ ]
+
+x <- 20:30 # vector
+x # 20 21 22 23 24 25 26 27 28 29 30
+length(x) # 11
+
+x[1] # 20
+x[15] # NA
+x[c(1, 2, 4)] # 20 21 23
+
+
+#To remove elements:
+x[c(-2, -4)]
+
+
+# slide 71
+# Question 8:
+# Can you mix positive and negative integers when
+# accessing elements of a vector?
+
+# slide 72
+x <- 20:30 # vector
+x # 20 21 22 23 24 25 26 27 28 29 30
+x[c(2, -4)] # ?
+
+mixVector <- 1:100
+mixVector[c(2, -4)] # error
+
+mixVector[c(2, 4)] # means get elements at 2nd and 4th place
+mixVector[c(-4)] # this removes the element at 4th position
+
+
+# slide 73
+# To modify vectors:
+x <- 20:30 # vector
+x # 20 21 22 23 24 25 26 27 28 29 30
+
+x[1] <- 10
+x # 10 21 22 23 24 25 26 27 28 29 30
+
+x[1:3] <- 10
+x # 10 10 10 23 24 25 26 27 28 29 30
+
+x[x < 25] <- 5
+x 
+
+# slide 75
+# Question 9: 
+# Create a numeric vector called `testVector' containing
+# numbers 1:10. Replace every second element of the vector
+# with 0. 
+
+testVector <- c(1:10)
+testVector[c(2, 4, 6, 8, 10)] <- 0
+testVector[seq(from = 2, to = 10, by = 2)] <- 0
+
 
 
 ############## 5) Matrices and Lists ####
+
+# slide 77
+
+?matrix
+matrixOne <- matrix(data = 1:5, nrow = 2, ncol = 3)
+
+
+# slide 78
+matrixOne <- matrix(data = 1:6, nrow = 2, ncol = 3)
+matrixOne
+
+dim(matrixOne) # dimension 2 3
+nrow(matrixOne) # 2
+ncol(matrixOne) # 3
+attributes(matrixOne)
+
+
+# slide 79
+# Column-binding or row-binding can be done by 
+# cbind() and rbind() functions
+a <- 1:4
+b <- 5:8
+
+c <- cbind(a, b)
+c
+dim(c) # 4 2
+
+d <- rbind(a, b)
+d
+dim(d) # 2 4
+
+
+# slide 80
+# Question 10
+# How would you bind the two matrices below?
+
+matOne <- matrix(data = 1:6, nrow = 2, ncol = 3)
+matTwo <- matrix(data = 7:12, nrow = 2, ncol = 3)
+
+matColBound <- cbind(matOne, matTwo)
+matRowBound <- rbind(matOne, matTwo)
+
+
+# Question 11
+# Can you bind the following two matrices? Explain 
+# your observations
+
+matNumeric <- matrix(data = 1:6, nrow = 2, ncol = 3)
+matCharacter <- matrix(data = c("a", "b", "c", "d", "e", "f"),
+                       nrow = 2, ncol = 3)
+
+matColBound <- cbind(matNumeric, matCharacter)
+matRowBound <- rbind(matNumeric, matCharacter)
+
 
 ############## 6) Data Frames ####
 
