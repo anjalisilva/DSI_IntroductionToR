@@ -837,6 +837,71 @@ barplot(as.matrix(iris[, c(1:4)]),
 colSums(as.matrix(iris[, c(1:4)]))
 
 
+
+# Question 19
+# Anscombes quartet is a set of 4 x,y data sets that 
+# were published by Francis Anscombe in a 1973 paper 
+# Graphs in statistical analysis. This dataset is available
+# as a standard or base dataset in R.
+
+# Obtain the dataset. What is the size of the dataset? 
+# Summarise the data by calculating the mean and variance. Then create a scatter plot
+# for each x,y pair of data.
+
+# standard or base dataset, covered in slide 17
+data(package = "datasets")
+anscombe
+
+# size of dataset
+dim(anscombe) # 11 x 8
+
+# Summarise the data by calculating the mean, variance, 
+# for each column and the correlation between each pair. 
+head(anscombe)
+
+# colnames
+colnames(anscombe)
+
+# mean
+mean(anscombe$x1)
+mean(anscombe$x2)
+mean(anscombe$x3)
+mean(anscombe$x4)
+mean(anscombe$y1)
+mean(anscombe$y2)
+mean(anscombe$y3)
+mean(anscombe$y4)
+
+# var
+var(anscombe$x1)
+var(anscombe$x2)
+var(anscombe$x3)
+var(anscombe$x4)
+var(anscombe$y1)
+var(anscombe$y2)
+var(anscombe$y3)
+var(anscombe$y4)
+
+# cor
+cor(anscombe$x1, anscombe$y1)
+cor(anscombe$x2, anscombe$y2)
+cor(anscombe$x3, anscombe$y3)
+cor(anscombe$x4, anscombe$y4)
+
+# quick methods
+summary(anscombe) # gives the mean and median
+sapply(1:8, function(x) mean(anscombe[ , x]))
+sapply(1:8, function(x) var(anscombe[ , x]))
+sapply(1:4, function(x) cor(anscombe[ , x], anscombe[ , x+4]))
+
+# plotting
+par(mfrow = c(2, 2)) # Create a 2 x 2 plotting matrix
+plot(x = anscombe$x1, y = anscombe$y1)
+plot(x = anscombe$x2, y = anscombe$y2)
+plot(x = anscombe$x3, y = anscombe$y3)
+plot(x = anscombe$x4, y = anscombe$y4)
+
+
 ############## 10) Next Steps ####
 
 
