@@ -427,10 +427,10 @@ matTwo <- matrix(data = 7:12, nrow = 2, ncol = 3)
 matColBound <- cbind(matOne, matTwo)
 matRowBound <- rbind(matOne, matTwo)
 
-
+# slide 81
 # Question 11
 # Can you bind the following two matrices? Explain 
-# your observations
+# your observations. 
 
 matNumeric <- matrix(data = 1:6, nrow = 2, ncol = 3)
 matCharacter <- matrix(data = c("a", "b", "c", "d", "e", "f"),
@@ -439,6 +439,62 @@ matCharacter <- matrix(data = c("a", "b", "c", "d", "e", "f"),
 matColBound <- cbind(matNumeric, matCharacter)
 matRowBound <- rbind(matNumeric, matCharacter)
 
+
+# slide 82
+# Question 12
+# In the below matrix, alter position of first row, second
+# column to numeric value of 10.
+matNumeric <- matrix(data = 1:6, nrow = 2, ncol = 3)
+matNumeric[1, 2]
+matNumeric[1, 2] <- 10
+matNumeric
+
+
+# slide 83
+# Question 13
+# How would you generate the following matrix in R?
+# Hint: see help documentation for matrix using ?matrix
+matNumeric <- matrix(data = 1:6, nrow = 2, ncol = 3, 
+                     byrow = TRUE)
+
+
+
+
+# slide 84
+# A list is represented as a vector but can contain
+# objects of different classes.
+
+listOne <- list(16, "abc", TRUE, 5 + 4i)
+listOne
+length(listOne) # 4
+typeof(listOne) # "list"
+class(listOne) # "list"
+
+
+# access the contents of the list
+# use square brackets
+listOne[[1]] # 16
+listOne[[2]] # "abc"
+listOne[[4]] # "5+4i"
+
+
+# slide 85
+# Empty lists can be created using vector() function:
+listTwo <- vector(mode = "list", length = 5)
+listTwo
+length(listTwo) # 5
+
+# Lists can have names:
+listDestinations1 <- list(1, 2, 3)
+listDestinations1
+names(listDestinations1) # NULL
+names(listDestinations1) <- c("Canada", 
+                              "Alaska",
+                              "England")
+listDestinations1
+listDestinations1$Canada
+listDestinations1$Alaska
+listDestinations1$England
 
 ############## 6) Data Frames ####
 
