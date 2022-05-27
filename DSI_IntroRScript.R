@@ -644,6 +644,7 @@ c # 2 x 2 matrix
 
 ############## 8) Functions ####
 
+# slide 28
 firstFunction <- function(argumentOne, argumentTwo) {
   cat("\n First argument is", argumentOne, "\n")
   cat("\n Second argument is", argumentTwo, "\n")
@@ -754,11 +755,46 @@ if (! requireNamespace("BiocManager", quietly = TRUE))
 BiocManager::install("GenomicFeatures")
 library("GenomicFeatures")
 # list all functions in the package
-lsf.str("package:GenomicFeatures")
+ls("package:GenomicFeatures")
+
+
+# slide 45
+# To down from GitHub, need to use ‘devtools’ pacakge.
+library("devtools")
+devtools::install_github("<Username>/<PackageName>",
+                           build_vignettes = TRUE)
+
+# Example: https://github.com/anjalisilva/mixGaussian
+library("devtools")
+devtools::install_github("anjalisilva/mixGaussian",
+                           build_vignettes = TRUE)
+library("mixGaussian")
+ls("package:mixGaussian")
+
+
+# slide 46
+# Question 18:
+# You are interested in R packages for analyzing 
+# Covid-19 data for a project you are doing. So you
+# search Google for such R packages.
+
+# From GitHub
+library("devtools")
+devtools::install_github("mponce0/covid19.analytics", 
+                         build_vignettes = TRUE)
+library("covid19.analytics")
+ls("package:covid19.analytics")
+
+
+# From CRAN
+install.packages("covid19.analytics")
+library("covid19.analytics")
+
+
 
 ############## 9) Graphics ####
 
-# slide 47
+# slide 49
 library(graphics) # to load and attach
 ?AirPassengers
 # Monthly Airline Passenger Numbers 1949-1960
@@ -768,7 +804,7 @@ plot(AirPassengers, type = "p")
 plot(AirPassengers, type = "p", main = "Monthly Airline
          Passenger Numbers 1949-1960") # zoom
 
-# slide 49
+# slide 52
 library(graphics) # to load and attach
 # plot
 plot(AirPassengers)
@@ -776,7 +812,7 @@ plot(AirPassengers, type = "l", main = "Monthly Airline
          Passenger Numbers 1949-1960") # zoom
 
 
-# slide 51
+# slide 53
 library(graphics) # to load and attach
 ?AirPassengers
 # Monthly Airline Passenger Numbers 1949-1960
@@ -786,19 +822,20 @@ hist(AirPassengers) # histogram
 boxplot(AirPassengers) # boxplot
 
 
-# slide 53
-
+# slide 55
 library(graphics) # to load and attach
 ?iris ?pairs
 pairs(iris[, c(1:4)], col = iris$Species, main = "Scatter plot of iris dataset")
 
-# slide 55
+
+# slide 57
 library(graphics) # to load and attach
 barplot(as.matrix(iris[, c(1:4)]),
         legend.text = TRUE,
         main = "Bar plot of iris dataset")
 # Calculate column sums of iris dataset
 colSums(as.matrix(iris[, c(1:4)]))
+
 
 ############## 10) Next Steps ####
 
