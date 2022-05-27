@@ -496,13 +496,309 @@ listDestinations1$Canada
 listDestinations1$Alaska
 listDestinations1$England
 
-############## 6) Data Frames ####
+############## 6) Data Frames & Booleans ####
+
+# show slide 5 - part 2
+
+# slide 6
+
+
+dataFrameExample <- data.frame(
+                    numbers = 1:4,
+                    sex = c("M", "M", "F", "F"))
+dataFrameExample
+class(dataFrameExample) # "data.frame"
+dim(dataFrameExample) # 4 2
+names(dataFrameExample) # "numbers" "sex"
+
+
+# slide 7
+# Data frames can be converted to a matrix using data.matrix().
+dataMatrix <- data.matrix(dataFrameExample)
+class(dataMatrix) # "matrix"
+dim(dataMatrix) # 4 2
+
+
+
+# slide 8
+# Question 14
+# Generate the following information into a data frame.
+
+testFrame <- data.frame(
+  numbers = 1:4,
+  sex = c("M", "M", "F", "F"),
+  age = c(30, 31, 40, 35),
+  height = c(72, 70, 65, 62.4))
+
+
+# Question 15
+# After generating the data frame, you realize the
+# height is recorded in inches but should be changed 
+# to centimeters. How would you do this?
+# Note, 1 inch = 2.54 cm.
+
+testFrame <- data.frame(
+  numbers = 1:4,
+  sex = c("M", "M", "F", "F"),
+  age = c(30, 31, 40, 35),
+  height = c(72, 70, 65, 62.4))
+
+testFrame$height 
+
+testFrame$height * 2.54
+
+# one method
+testFrame$height <- testFrame$height * 2.54
+testFrame[, 4] <- testFrame[, 4] * 2.54
+
+
+# Question 16
+# Given the below numeric vector 'numericVec', how can a user
+# check if values are greater than 5?
+
+numericVec <- c(1.1, 3, 5.3, 2)
+numericVec > 5
+
+
+# Question 17
+# Given the below numeric vector 'numericVec', how can a user
+# retrieve the value that is greater than 5?
+
+numericVec <- c(1.1, 3, 5.3, 2)
+numericVec > 5
+numericVec[numericVec > 5]
 
 ############## 7) Data Import/Export ####
 
+# slide 17
+# To see the list of pre-loaded data in R:
+data(package = "datasets")
+AirPassengers # Example dataset
+head(AirPassengers) # see first few entries
+tail(AirPassengers) # see last few entries
+
+
+# slide 18
+
+# Let us look at another pre-loaded datasets:
+women # another dataset (last)
+?women
+dim(women) # 15  2
+class(women) # "data.frame"
+head(women) # height and weight information
+women$height > 60 # slicing
+women[women$height > 60, ] # slicing
+
+# slide 19
+# Files can be written using functions like write.csv(), write.table():
+getwd() # file will be saved here
+write.csv(x = women, file = "data/women.csv")
+# saving women dataset in current working directory
+
+
+# slide 20
+# Txt files can be read using read.table(”location of 
+# the file”) or read.csv()
+womenNew <- read.csv(file = "women.csv", row.names = 1)
+womenNew
+head(womenNew) # to view first part of object
+tail(womenNew) # to view last part of object
+dim(womenNew) #  15  2
+womenNew[c(1:5), ] # to view first 5 rows
+womenNew[, 1] # to view first column
+
+
+# slide 21
+# “+” is used for addition:
+x <- 2.5 + 2
+x # 4.5
+y <- 2:15
+sum(y) # 119
+sum(y[1:3]) # 9
+
+
+
+# slide 22
+# “-” is used for subtraction:
+x <- 2.5 - 2
+x # 0.5
+
+# “/” is used for division:
+x <- 2 / 2 
+x #1
+
+
+# slide 23
+# “*” is used for multiplication:
+x <- 2 * 2 
+x#4
+
+# “%*% ” is used for matrix multiplication:
+a <- matrix(1:6, nrow = 2, ncol = 3) # 2 x 3 matrix
+a
+b <- matrix(7:12, nrow = 3, ncol = 2) # 3 x 2 matrix
+b
+c <- a %*% b
+c # 2 x 2 matrix
+
+
 ############## 8) Functions ####
 
+firstFunction <- function(argumentOne, argumentTwo) {
+  cat("\n First argument is", argumentOne, "\n")
+  cat("\n Second argument is", argumentTwo, "\n")
+  argumentThree <- argumentOne + argumentTwo
+  cat("\n argumentOne + argumentTwo is", argumentThree, "\n")
+  
+  return(argumentThree)
+}
+
+firstFunction # “call” or“invoke” the function
+
+
+# slide 29
+firstFunction(argumentOne = 2,
+              argumentTwo = 3)
+
+firstFunction(2, 3) # values will take order of arguments
+
+firstFunction(argumentOne = 3,
+              argumentTwo = 5)
+
+testValue <- firstFunction(argumentOne = 3,
+                          argumentTwo = 5)
+testValue
+testValue + 2 # 10
+
+firstFunction(1) # error because require two values
+
+
+# slide 30
+
+secondFunction <- function(argOne = 1, argTwo = 3) {
+  cat("\n First argument is", argOne, "\n")
+  cat("\n Second argument is", argTwo, "\n")
+  argThree <- argOne + argTwo
+  cat("\n argOne + argTwo is", argThree, "\n")
+  return(argThree) 
+  }
+
+secondFunction # “call” or“invoke” the function
+
+secondFunction(1, 2)
+
+secondFunction(1) # no error because of default values
+
+# slide 31
+# Local and Global Variables
+
+# slide 32
+
+argOne <- "Hello"
+anotherFunction <- function() {
+  argOne <- 10
+  return(argOne)
+}
+anotherFunction()
+
+argOne # What would this return?
+
+
+# slide 33
+# Incorrect
+dataAnalysis <- function() {
+  heightData <- women$height 
+  return(mean(heightData))
+}
+dataAnalysis() # will work only for women$height
+
+
+# Recommended
+dataAnalysis <- function(inputData) {
+  meanOfHeight <- mean(inputData)
+  return(meanOfHeight)
+}
+dataAnalysis(inputData = women$height)
+# will work for any dataset with height information
+
+# slide 35
+# Non-base Functions
+
+# slide 38
+# Non-base Functions
+
+# Install package from CRAN, case matters!
+install.packages("mclust")
+library("mclust") # to load and attach
+
+# slide 39
+vignette("mclust") # vignette for ‘mclust’
+?'mclust-package' # get information on package
+?mclust # get information on package
+ls("package:mclust") # list all functions in package
+
+
+# slide 40
+# Running mclust
+MclustResults <- mclust::Mclust(data = women) str(MclustResults) # provide the structure; list of 15 names(MclustResults)
+MclustResults$G # There are four clusters in the dataset
+# Citing the package
+citation("mclust")
+
+
+# slide 41
+if (! requireNamespace("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+
+# slide 43
+BiocManager::install("GenomicFeatures")
+library("GenomicFeatures")
+# list all functions in the package
+lsf.str("package:GenomicFeatures")
+
 ############## 9) Graphics ####
+
+# slide 47
+library(graphics) # to load and attach
+?AirPassengers
+# Monthly Airline Passenger Numbers 1949-1960
+# plot
+plot(AirPassengers)
+plot(AirPassengers, type = "p")
+plot(AirPassengers, type = "p", main = "Monthly Airline
+         Passenger Numbers 1949-1960") # zoom
+
+# slide 49
+library(graphics) # to load and attach
+# plot
+plot(AirPassengers)
+plot(AirPassengers, type = "l", main = "Monthly Airline
+         Passenger Numbers 1949-1960") # zoom
+
+
+# slide 51
+library(graphics) # to load and attach
+?AirPassengers
+# Monthly Airline Passenger Numbers 1949-1960
+# To have multiple plots in one overall plot using
+par(mfrow = c(1, 2))
+hist(AirPassengers) # histogram
+boxplot(AirPassengers) # boxplot
+
+
+# slide 53
+
+library(graphics) # to load and attach
+?iris ?pairs
+pairs(iris[, c(1:4)], col = iris$Species, main = "Scatter plot of iris dataset")
+
+# slide 55
+library(graphics) # to load and attach
+barplot(as.matrix(iris[, c(1:4)]),
+        legend.text = TRUE,
+        main = "Bar plot of iris dataset")
+# Calculate column sums of iris dataset
+colSums(as.matrix(iris[, c(1:4)]))
 
 ############## 10) Next Steps ####
 
