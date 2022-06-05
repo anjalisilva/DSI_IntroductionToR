@@ -12,6 +12,6 @@
 
 <img src="DescrpImage1.png" alt="README1" width="450" height="250"/>
 
-<img src="DescrpImage2.png" alt="README1" width="650" height="550"/>
+<img src="DescrpImage2.png" alt="README1" width="550" height="550"/>
 
 <div style="text-align:center">
