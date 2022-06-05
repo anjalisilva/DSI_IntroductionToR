@@ -7,6 +7,6 @@
 
 <div style="text-align:center">
 
-<img src="Images/README1.png" alt="ShinyLinePlot" width="750" height="550"/>
+<img src="Images/README1.png" alt="README1" width="750" height="550"/>
 
 <div style="text-align:center">
