@@ -3,20 +3,13 @@
 ## Cohort Programming 2022
 ### Summer Undergraduate Data Science (SUDS) Research Program
 
+### Workshop took place on 3 June 2022, Friday from 10 am to 4 pm.
 
 
 <div style="text-align:center">
 
-<img src="Images/README1.png" alt="README1" width="750" height="550"/>
+<img src="DescrpImage1.png" alt="README1" width="650" height="550"/>
 
-<div style="text-align:center">
-
-
-
-<div style="text-align:center">
-
-<img src="DescrpImage1.png" alt="README1" width="750" height="550"/>
-
-<img src="DescrpImage2.png" alt="README1" width="750" height="550"/>
+<img src="DescrpImage2.png" alt="README1" width="650" height="550"/>
 
 <div style="text-align:center">
