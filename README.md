@@ -8,7 +8,7 @@
 
 <div style="text-align:center">
 
-<img src="DescrpImage1.png" alt="README1" width="650" height="550"/>
+<img src="DescrpImage1.png" alt="README1" width="450" height="450"/>
 
 <img src="DescrpImage2.png" alt="README1" width="650" height="550"/>
 
