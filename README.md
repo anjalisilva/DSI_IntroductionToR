@@ -1,12 +1,12 @@
 # Summer Undergraduate Data Science (SUDS) Research Program: Introduction To R
 
-## Date: 3 June 2022, Friday 
-## Time: 10 am to 4 pm EST
-## Institute: University of Toronto (St.George)
-
 
 # Introduction
 "The SUDS Opportunities Program is an ideal way to get involved in a high-quality and enriching data science opportunity and to experience applications of data science methods and tools in a range of application areas. " For more informtion, see: https://datasciences.utoronto.ca/suds-cohort-program-2022/
+
+### Date: 3 June 2022, Friday 
+### Time: 10 am to 4 pm EST
+### Institute: University of Toronto (St.George)
 
 
 # Materials
@@ -34,7 +34,7 @@
 
 *Schedule may be modified as needed, and learners will be informed. Course will be taught using R version 4.2.1 and RStudio Desktop version 2022.02.3. 
 
-| Time           | Topic             
+| Time            | Topic                         |
 |-------------------------------------------------|
 |10.00 - 10.20 am | Introduction                  |
 |10.20 - 10.50 am | Setup and RStudio             |
