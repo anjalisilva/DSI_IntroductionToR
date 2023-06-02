@@ -1,5 +1,4 @@
-# Introduction To R
-# Summer Undergraduate Data Science (SUDS) Research Program
+# Summer Undergraduate Data Science (SUDS) Research Program: Introduction To R
 
 ## Cohort Programming 2022
 ## Date: 3 June 2022, Friday 
