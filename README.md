@@ -1,12 +1,12 @@
 # Introduction To R
-# Data Science Skills Day
+# Summer Undergraduate Data Science (SUDS) Research Program
+
 ## Cohort Programming 2022
-### Summer Undergraduate Data Science (SUDS) Research Program
+## Date: 3 June 2022, Friday 
+## Time: from 10 am to 4 pm
 
-#### Workshop took place on 3 June 2022, Friday from 10 am to 4 pm
-
-#### Link: https://datasciences.utoronto.ca/suds-cohort-program-2022/
-
+# Introduction
+"The SUDS Opportunities Program is an ideal way to get involved in a high-quality and enriching data science opportunity and to experience applications of data science methods and tools in a range of application areas. " For more informtion, see: ghttps://datasciences.utoronto.ca/suds-cohort-program-2022/
 
 <div style="text-align:center">
 
