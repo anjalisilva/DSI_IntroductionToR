@@ -46,7 +46,6 @@
 | 2.10 - 3.10 pm   | Data Import/Export; Functions |
 | 3.10 -3.20 pm    | Short Break                   |
 | 3.20 - 3.45 pm   | Graphics; Next Steps          |
-|--------------------------------------------------|
 
  
 # Other Information
