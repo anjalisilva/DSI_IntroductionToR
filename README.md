@@ -68,4 +68,4 @@
 
 # Contributions
 -   `IntroductionToR` welcomes issues, enhancement requests, and other contributions. To submit an issue, use the [GitHub
-issues](https://github.com/anjalisilva/IntroductionToR/issues).
+issues](https://github.com/anjalisilva/DSI_IntroductionToR).
