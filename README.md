@@ -34,19 +34,19 @@
 
 *Schedule may be modified as needed, and learners will be informed. Course will be taught using R version 4.2.1 and RStudio Desktop version 2022.02.3. 
 
-| Time            | Topic                         |
-|-------------------------------------------------|
-|10.00 - 10.20 am | Introduction                  |
-|10.20 - 10.50 am | Setup and RStudio             |
-|10.50 - 11.00 am | Short Break                   |
-|11.00 - 12.15 pm | Basics + Vectors              |
-|12.15 - 1.00 pm  | Lunch                         |
-|1.00 - 2.00 pm   | Matrices, Lists, Data Frames  |
-|2.00 - 2.10 pm   | Short Break                   |
-|2.10 - 3.10 pm   | Data Import/Export; Functions |
-|3.10 -3.20 pm    | Short Break                   |
-|3.20 - 3.45 pm   | Graphics; Next Steps          |
-|-------------------------------------------------
+| Time             | Topic                         |
+|------------------|-------------------------------|
+| 10.00 - 10.20    | Introduction                  |
+| 10.20 - 10.30    | Setup and RStudio             |
+| 10.50 - 11.00 am | Short Break                   |
+| 11.00 - 12.15 pm | Basics + Vectors              |
+| 12.15 - 1.00 pm  | Lunch                         |
+| 1.00 - 2.00 pm   | Matrices, Lists, Data Frames  |
+| 2.00 - 2.10 pm   | Short Break                   |
+| 2.10 - 3.10 pm   | Data Import/Export; Functions |
+| 3.10 -3.20 pm    | Short Break                   |
+| 3.20 - 3.45 pm   | Graphics; Next Steps          |
+|--------------------------------------------------|
 
  
 # Other Information
