@@ -4,6 +4,7 @@
 ## Time: 10 am to 4 pm EST
 ## Institute: University of Toronto (St.George)
 
+
 # Introduction
 "The SUDS Opportunities Program is an ideal way to get involved in a high-quality and enriching data science opportunity and to experience applications of data science methods and tools in a range of application areas. " For more informtion, see: https://datasciences.utoronto.ca/suds-cohort-program-2022/
 
@@ -14,7 +15,9 @@
 * **Learners must have RStudio (Previously: http://www.rstudio.com/; now: https://posit.co/download/rstudio-desktop/). We will help with downloading.**
 * Screen space can be a limitation during online learning since you'll want to see the instructor's screen and have your RStudio open so that you can type along. If you have access to a second monitor or a larger tablet to attend the course while keeping your laptop screen available for coding - this would be great! If not - don't worry, we'll manage!
 
-# Learning Objectives:
+
+# Learning Objectives
+
 * Install R and RStudio.
 * Navigate the RStudio environment.
 * Become familiar with R fundamentals.
@@ -27,9 +30,9 @@
 * Be aware of sources for expanding skills in R.
 
 
-# Schedule*
-*Schedule may be modified as needed, and learners will be informed. Course will be taught using R version 4.2.1 and RStudio Desktop version 2022.02.3. 
+# Schedule
 
+*Schedule may be modified as needed, and learners will be informed. Course will be taught using R version 4.2.1 and RStudio Desktop version 2022.02.3. 
 
 | Time           | Topic             
 |-------------------------------------------------|
@@ -45,6 +48,7 @@
 |3.20 - 3.45 pm   | Graphics; Next Steps          |
 |-------------------------------------------------
 
+ 
 # Other Information
 <div style="text-align:center">
 
@@ -60,9 +64,9 @@
 
 - We wish to acknowledge this land on which the University of Toronto operates. For thousands of years it has been the traditional land of the Huron-Wendat, the Seneca, and most recently, the Mississaugas of the Credit River. Today, this meeting place is still the home to many Indigenous people from across Turtle Island and we are grateful to have the opportunity to work on this land.
 
-## Maintainer
+# Maintainer
 -   Anjali Silva (<a.silva@utoronto.ca>), University of Toronto.
 
-## Contributions
+# Contributions
 -   `IntroductionToR` welcomes issues, enhancement requests, and other contributions. To submit an issue, use the [GitHub
 issues](https://github.com/anjalisilva/IntroductionToR/issues).
