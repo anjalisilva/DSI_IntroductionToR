@@ -1,6 +1,7 @@
 Images/
 *.RData
 *.R
+papers/
 data/
 *.Rproj
 *.tex
